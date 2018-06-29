@@ -17,7 +17,7 @@ console.log(name6)
 // ES5
 function driversLicense5(passedTest) {
 
-  if(passedTest) {
+  if (passedTest) {
     var firstName = 'John'
     var yearOfBirth = 1990
   }
@@ -32,38 +32,61 @@ function driversLicense6(passedTest) {
 
   let firstName
   const yearOfBirth = 1990
-  
-    if(passedTest) {
-       firstName = 'John'
-    }
 
-    console.log(firstName + ', born in ' + yearOfBirth + ', is now officially allowed to drive a car.')
-  }
-  
-  driversLicense6(true)
-
-  let i = 23
-
-  for(let i = 0; i < 5; i++) {
-    console.log(i)
+  if (passedTest) {
+    firstName = 'John'
   }
 
+  console.log(firstName + ', born in ' + yearOfBirth + ', is now officially allowed to drive a car.')
+}
+
+driversLicense6(true)
+
+let i = 23
+
+for (let i = 0; i < 5; i++) {
   console.log(i)
+}
 
-  //////////////////////////////////////////
-  // Lecture: Blocks and IIFEs
+console.log(i)
 
-  // ES6
-  {
-    const a = 1
-    let b = 2
-  }
+//////////////////////////////////////////
+// Lecture: Blocks and IIFEs
 
-  // console.log(a + b)
+// ES6
+{
+  const a = 1
+  let b = 2
+}
 
-  // ES5
-  (function() {
-    var c = 3
-  })();
-  
-  console.log(c)
+// console.log(a + b)
+
+// ES5
+(function () {
+  var c = 3
+})();
+
+// console.log(c)
+
+//////////////////////////////////////////
+// Lecture: Strings
+
+let firstName = 'John'
+let lastName = 'Smith'
+const yearOfBirth = 1990
+
+function calcAge(year) {
+  return 2018 - year
+}
+
+// ES5
+console.log('This is ' + firstName + ' ' + lastName + '.' + ' He was born in ' + yearOfBirth + '. Today, he is ' + calcAge(yearOfBirth) + ' years old.')
+
+// ES6
+console.log(`This is ${firstName} ${lastName}. He was born in ${yearOfBirth}. Today, he is ${calcAge(yearOfBirth)} years old.`)
+
+const n = `${firstName} ${lastName}`
+console.log(n.startsWith('j'))
+console.log(n.endsWith('sm'))
+console.log(n.includes('oh'))
+console.log(`${firstName} `.repeat(5))
