@@ -333,3 +333,22 @@ function isFullAge6(...years) {
 }
 
 isFullAge6(1990, 2001, 1965)
+
+//////////////////////////////////////////
+// Lecture: Default Parameters
+
+ // ES5
+ function SmithPerson(firstName, yearOfBirth, lastName, nationality) {
+
+  lastName === undefined ? lastName = 'Smith' : lastName
+
+   this.firstName = firstName
+   this.lastName = lastName
+   this.yearOfBirth = yearOfBirth
+   this.nationality = nationality
+ }
+
+ var john = new SmithPerson('John', 1990)
+ var emaily = new SmithPerson('Emily', 1983, 'Diaz', 'spanish')
+
+ // ES6 Define parameters in the function call
