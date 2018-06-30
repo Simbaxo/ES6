@@ -280,3 +280,33 @@ console.log(ages7[full.indexOf(true)])
 // ES6
 console.log(ages7.findIndex(cur => cur >= 18))
 console.log(ages7.find(cur => cur >= 18))
+
+//////////////////////////////////////////
+// Lecture: Spread Operator
+
+function addFourAges(a, b, c, d) {
+  return a + b + c + d
+}
+
+var sum1 = addFourAges(18, 30, 12, 21)
+console.log(sum1)
+
+// ES5
+var ages8 = [18, 30, 12, 21]
+var sum2 = addFourAges.apply(null, ages8)
+console.log(sum2)
+
+// ES6
+const sum3 = addFourAges(...ages8)
+console.log(sum3)
+
+const familySmith = ['John', 'Jane', 'Mark']
+const familyMiller = ['Mary', 'Bob', 'Ann']
+const bigFamily = [...familySmith, ...familyMiller]
+console.log(bigFamily)
+
+const h = document.querySelector('h1')
+const boxes1 = document.querySelectorAll('.box')
+const all = [h, ...boxes1]
+
+Array.from(all).forEach(cur => cur.style.color = 'purple')
